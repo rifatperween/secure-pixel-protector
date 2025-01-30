@@ -6,7 +6,7 @@ import { Upload, Lock, Unlock, Shield } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
       {/* Hero Section */}
       <section className="hero-gradient text-white py-20">
         <div className="container mx-auto px-6 text-center">
@@ -17,7 +17,7 @@ const Index = () => {
           <Button
             variant="secondary"
             size="lg"
-            className="fade-in"
+            className="fade-in bg-white/90 hover:bg-white text-purple-700 hover:text-purple-800 transition-all"
             onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Get Started
@@ -26,13 +26,13 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-6 text-center">
           <div className="flex items-center justify-center mb-8">
-            <Shield className="w-12 h-12 text-primary" />
+            <Shield className="w-12 h-12 text-purple-600" />
           </div>
-          <h2 className="text-3xl font-bold mb-6">About Our System</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-purple-900">About Our System</h2>
+          <p className="text-lg text-purple-800/80 max-w-2xl mx-auto">
             Our system uses advanced AES encryption to secure your images. 
             With military-grade security protocols, your visual data remains 
             protected and private.
@@ -41,50 +41,50 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-16 bg-gray-50">
+      <section id="features" className="py-16 bg-gradient-to-b from-purple-50/50 to-pink-50/50">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Encrypt Card */}
-            <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="p-6 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-purple-100">
               <div className="text-center mb-6">
-                <Lock className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-2xl font-bold">Encrypt</h3>
+                <Lock className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-purple-900">Encrypt</h3>
               </div>
               <form className="space-y-4">
                 <div>
-                  <Label htmlFor="encrypt-file">Upload Image</Label>
+                  <Label htmlFor="encrypt-file" className="text-purple-800">Upload Image</Label>
                   <div className="mt-2 flex items-center gap-4">
-                    <Input id="encrypt-file" type="file" accept="image/*" />
-                    <Upload className="w-5 h-5 text-gray-500" />
+                    <Input id="encrypt-file" type="file" accept="image/*" className="bg-white/70" />
+                    <Upload className="w-5 h-5 text-purple-500" />
                   </div>
                 </div>
                 <div>
-                  <Label htmlFor="encrypt-key">Security Key</Label>
-                  <Input id="encrypt-key" type="password" placeholder="Enter your security key" />
+                  <Label htmlFor="encrypt-key" className="text-purple-800">Security Key</Label>
+                  <Input id="encrypt-key" type="password" placeholder="Enter your security key" className="bg-white/70" />
                 </div>
-                <Button className="w-full">Encrypt Image</Button>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700">Encrypt Image</Button>
               </form>
             </Card>
 
             {/* Decrypt Card */}
-            <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="p-6 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-purple-100">
               <div className="text-center mb-6">
-                <Unlock className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-2xl font-bold">Decrypt</h3>
+                <Unlock className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-purple-900">Decrypt</h3>
               </div>
               <form className="space-y-4">
                 <div>
-                  <Label htmlFor="decrypt-file">Upload Encrypted File</Label>
+                  <Label htmlFor="decrypt-file" className="text-purple-800">Upload Encrypted File</Label>
                   <div className="mt-2 flex items-center gap-4">
-                    <Input id="decrypt-file" type="file" accept=".bin" />
-                    <Upload className="w-5 h-5 text-gray-500" />
+                    <Input id="decrypt-file" type="file" accept=".bin" className="bg-white/70" />
+                    <Upload className="w-5 h-5 text-purple-500" />
                   </div>
                 </div>
                 <div>
-                  <Label htmlFor="decrypt-key">Security Key</Label>
-                  <Input id="decrypt-key" type="password" placeholder="Enter your security key" />
+                  <Label htmlFor="decrypt-key" className="text-purple-800">Security Key</Label>
+                  <Input id="decrypt-key" type="password" placeholder="Enter your security key" className="bg-white/70" />
                 </div>
-                <Button className="w-full">Decrypt Image</Button>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700">Decrypt Image</Button>
               </form>
             </Card>
           </div>
@@ -92,9 +92,9 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="bg-purple-900 text-white py-8">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-400">
+          <p className="text-purple-200">
             Created with ❤️ by Your Team
           </p>
         </div>
